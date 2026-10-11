@@ -1,0 +1,36 @@
+{
+  "name": "expense-voucher-management-system",
+  "version": "1.0.0",
+  "description": "Full Stack Expense Voucher Management System for PSPL Internship Assignment",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --workspace=server run dev",
+    "dev:client": "npm --workspace=client run dev",
+    "build": "npm --workspace=server run build && npm --workspace=client run build",
+    "build:server": "npm --workspace=server run build",
+    "build:client": "npm --workspace=client run build",
+    "seed": "npm --workspace=server run seed",
+    "seed:memory": "npm --workspace=server run seed:memory",
+    "test": "npm --workspace=server run test",
+    "test:client": "npm --workspace=client run test",
+    "lint": "npm --workspace=server run lint && npm --workspace=client run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "mern",
+    "expense-voucher",
+    "mongodb",
+    "express",
+    "react",
+    "typescript"
+  ],
+  "author": "Mohsin Hasan",
+  "license": "ISC"
+}
